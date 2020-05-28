@@ -1,0 +1,20 @@
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+
+import { IonicModule } from '@ionic/angular';
+
+import { PizzaPagePageRoutingModule } from './pizza-page-routing.module';
+
+import { PizzaPagePage } from './pizza-page.page';
+
+@NgModule({
+  imports: [
+    CommonModule,
+    FormsModule,
+    IonicModule,
+    PizzaPagePageRoutingModule
+  ],
+  declarations: [PizzaPagePage]
+})
+export class PizzaPagePageModule {}
