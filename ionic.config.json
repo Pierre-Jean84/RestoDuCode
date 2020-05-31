@@ -1,5 +1,7 @@
 {
   "name": "RestoDuCode",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

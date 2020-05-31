@@ -2,18 +2,27 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
 import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
+
 import { HomePage } from './home.page';
-
-import { HomePageRoutingModule } from './home-routing.module';
-
+import { PizzaService } from '../services/pizza.service';
+import { CartModule } from '../components/cart/cart.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    HomePageRoutingModule
+    RouterModule.forChild([
+      {
+        path: '',
+        component: HomePage
+      }
+    ]),
+    CartModule,
   ],
-  declarations: [HomePage]
+
+  declarations: [HomePage],
+  providers: [PizzaService],
 })
-export class HomePageModule {}
+export class HomePageModule { }
